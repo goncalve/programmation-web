@@ -38,21 +38,24 @@ Les paramètres de connexion sont les suivants :
 __ https://filezilla-project.org/
 
 
+PHP
++++
+
+Pour connaître la version et la configuration de PHP sur le serveur de l'IUT :
+
+http://iutdoua-web.univ-lyon1.fr/~isabelle.goncalves/PHP
+
 PhpMyAdmin
-++++++++++++++++++++++
+++++++++++
 
 Pour accéder à l'interface PhpMyAdmin qui vous permet de gérer votre base de données MySQL sur le serveur de l'IUT, il vous suffit de vous connecter à l'adresse :
 
-http://iutdoua-webetu.univ-lyon1.fr/phpMyAdmin/
+http://iutdoua-web.univ-lyon1.fr/phpMyAdmin/
 
 Les paramètres de connexion sont les suivants :
 
 * Login : pxxxxxxx
 * Mot de passe : Numéro BIP (sur la carte étudiant)
-
-.. note::
-
-  Pensez à bien paramétrer un mot de passe différent pour vous connecter à vos BDD et à PhpMyAdmin.
 
 Utiliser un serveur local pour tester vos pages
 ===============================================
