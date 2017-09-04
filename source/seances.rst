@@ -1,14 +1,15 @@
 Plan des séances
 ================
 
-Séance 1 et 2 : 4H
-++++++++++++++++++++
+`Séance 1 et 2 : 4H <_static/seances/TD1-PHP-intro.pdf>`_
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 * Le Web : Rappel
 * Les bases de PHP
+* L'utilisation de formulaires
 
 Séance 3 + 4 : 4h
-++++++++++++++++++++
++++++++++++++++++
 
 * Les bases de données
 * PHP Object

@@ -314,8 +314,8 @@ Les chaînes de caractères
 Les chaînes de caractères :
 
 * écrites entre ``'`` ou entre ``"``
-* concatenation avec ``.`` (attention ``+`` fait la somme)
-* peuvent interpreter la valeur d'une variable (si ``"`` est utilisé)
+* concaténation avec ``.`` (attention ``+`` fait la somme)
+* peuvent interpréter la valeur d'une variable (si ``"`` est utilisé)
 
 NB: Beaucoup de fonctions existent pour la manipulation des strings (`PHP Manual for Strings`_)
 

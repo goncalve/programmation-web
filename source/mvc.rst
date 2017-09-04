@@ -52,37 +52,34 @@ La partie Modèle
 * C'est la problématique traitement/calcul
 * Elle contient aussi tout ce qui concerne l'accès aux données
 * C'est là qu'on trouvera les requêtes SQL
-* Notion **ORM** : Object Relational Mapper
+* En Web, on utilise souvent la notion d' **ORM** : Object Relational Mapper
+  
+  - Il s'agit de mapper les tables SQL avec des classes de deux types :
 
-  - Mappe les tables SQL avec des classes
-  - Les colonnes des tables deviennent des attributs d'objets
+  - Les objets qu'on manipule, les **DTO**, Data Transfer Object
+     - Une classe pour chaque table sur laquelle on souhaite travailler
+     - Les colonnes des tables deviennent des attributs d'objets
+     - Ce sont des objets très simples (uniquement les colonnes de la table, et des accesseurs)
 
-    - Une classe pour chaque table sur laquelle on souhaite travailler
-    - Objets très simples (uniquement les colonnes de la table, et des accesseurs)
-    - On les appelle des **DTO**, Data Transfer Object
-    - On travaille sur ces objets, puis on appelle une autre classe pour mettre à jour la base :
-
-  - Les **Repository** (aussi appelés **DAO**, Data Access Object) qui font les requêtes
-
-    - Une classe par table également
-    - Ces objets ont une référence vers la BDD (PDO)
-    - Une méthode ``getById($id)`` pour créer un objet DTO et remplir ses attributs à partir de la base, grâce à une requête SQL (on appelle ça "hydrater" le DTO)
-    - Une méthode par cas d'utilisation (tous les films sortis en 2009, tous les films avec Di Caprio...)
-
-      - ces méthodes retournent une collection (array par exemple) de DTO hydratés
-
-    - ``persist($dto)`` pour sauvegarder un nouveau DTO en base (puis penser à hydrater son ID, voir `PDO::lastInsertId()`__)
-    - ``update($dto)`` pour enregistrer en base les modifications faites sur un DTO existant (hydraté)
-    - ``delete($dto)`` pour supprimer de la base un DTO existant (hydraté)
+  - Les objets qui font le lien avec la base de données, les **Repository** (aussi appelés **DAO**, Data Access Object)
+     - Une classe par table également
+     - Ce sont les objets qui font les requêtes
+     - Ils ont une référence vers la BDD (PDO)
+     - Une méthode ``getById($id)`` pour créer un objet DTO et remplir ses attributs à partir de la base, grâce à une requête SQL (on appelle ça "hydrater" le DTO)
+     - Une méthode par cas d'utilisation (tous les films sortis en 2009, tous les films avec Di Caprio...)
+     - ces méthodes retournent une collection (array par exemple) de DTO hydratés
+     - ``persist($dto)`` pour sauvegarder un nouveau DTO en base (puis penser à hydrater son ID, voir `PDO::lastInsertId()`__)
+     - ``update($dto)`` pour enregistrer en base les modifications faites sur un DTO existant (hydraté)
+     - ``delete($dto)`` pour supprimer de la base un DTO existant (hydraté)
 
 __ https://secure.php.net/manual/fr/pdo.lastinsertid.php
 
 La partie contrôleur
 ++++++++++++++++++++
 
-* Fait le lien entre l'utilisateur et le reste de l'application
-* Se charge d'analyser et de traiter la requête de l'utilisateur.
-* Il demande au modèle les données (DTOs, collections de DTOs) et passe la main à la vue qui utilisera ces données pour afficher la page
+* Lien entre l'utilisateur et le reste de l'application
+* Elle se charge d'analyser et de traiter la requête de l'utilisateur.
+* Elle demande au modèle les données (DTOs, collections de DTOs) et passe la main à la vue qui utilisera ces données pour afficher la page
 * En Web, il y a souvent un **FrontController** (index.php) qui analyse la requête HTTP et dispatche vers le sous-contrôleur de la page demandée
 
   - Il faut que toutes les requêtes arrivent vers le FrontController quelque soit l'URL demandée
@@ -129,7 +126,7 @@ Transformer son code en une architecture MVC Maison
 .. ( `Un peu d'aide sur le sujet <http://bpesquet.developpez.com/tutoriels/php/evoluer-architecture-mvc/>`_ )
    TODO read this
 
-Arborescence à respecter : 3 répertoire "Model", "View", "Controller" ; un index.php qui sert de FrontController, et un répertoire "Library" pour stocker les bibliothèques additionnelles si nécessaire.
+Arborescence à respecter : 3 répertoires "Model", "View", "Controller" ; un index.php qui sert de FrontController, et un répertoire "Library" pour stocker les bibliothèques additionnelles si nécessaire.
 
 1. Refactoriser le code concernant l'accès aux données pour votre projet en créant/reprenant les classes suivantes:
 
