@@ -13,7 +13,7 @@ Qu'est ce qu'une base de données ?
 Un **base de données** (BDD) sert à enregistrer des données
 
  * Format organisé et hiérarchisé
- * Requetable
+ * Requêtable
  * Durable
 
 Durée de vie d'une variable PHP = temps d'éxécution du script
@@ -62,10 +62,10 @@ Comment s'interfacent PHP et MySQL ?
 #. MySQL renvoie les données en réponse à la requête
 #. PHP traite les données reçues côté serveur
 
-NB:
+.. note::
 
   Dans ce schéma, vous pourriez remplacer PHP par n'importe quel langage dédié à la gestion de pages web dynamiques.
-  De même, MySQL pourrait très bien être remplacé par un autre SGBD, tant que le langage qui utilisé de PHP au SGBD reste le SQL.
+  De même, MySQL pourrait très bien être remplacé par un autre SGBD, tant que le langage qui est utilisé de PHP au SGBD reste le SQL.
 
 Structure d'une base de données
 +++++++++++++++++++++++++++++++
@@ -106,10 +106,10 @@ Identifiant   Champ1      Champ2      ...
 Créer et gérer une base de données
 ==================================
  
-L'interface PhpMyAdmin
+L'interface phpMyAdmin
 ++++++++++++++++++++++
 
-Pour faciliter les opérations de gestion des bases de données, il existe un outil nommé **PhpMyAdmin**,
+Pour faciliter les opérations de gestion des bases de données, il existe un outil nommé **phpMyAdmin**,
 qui propose une interface de gestion Web des BDD sous la forme de pages PHP permettant (entre autres) :
 
 - la création/suppression de bases de données;
@@ -119,30 +119,21 @@ qui propose une interface de gestion Web des BDD sous la forme de pages PHP perm
 - la visualisation des données enregistrées;
 - l'importation/exportation de bases de données (complètes ou partielles).
  
-Accéder à PhpMyAdmin
-++++++++++++++++++++
-
-* Depuis le site Web de l'IUT  : http://iutdoua-web.univ-lyon1.fr/phpMyAdmin/
-   - login habituel : pxxxxxxx
-   - mot de passe : code initial
-   
-* Depuis un serveur local (type WAMP) : http://localhost/phpMyAdmin
- 
 .. figure:: _static/bdd/phpmyadmin.png
 		:alt: phpmyadmin
- 
  
 .. _exo_phpmyadmin:  
 
 Exercice
 ++++++++
 
-L'objectif de cet exercice est de se familiariser avec l'interface PhpMyAdmin.
+L'objectif de cet exercice est de se familiariser avec l'interface phpMyAdmin.
 
 Instructions :
 
-#. Créez une table nommée "films" avec les champs "id" (entier, clé primaire), "nom" (chaîne de caractères), "annee" (entier) et "score" (nombre flottant).
-#. Remplissez vos tables avec quelques données (5-10 films).
+#. Créez une table nommée "film" avec les champs "id" (entier, clé primaire), "nom" (chaîne de caractères), "annee" (entier) , "score" (nombre flottant) et "nbVotants" (nombre entier).
+#.  Créez un film dans la table : Aliens (1986) aura l'identifiant 13, un score de 8.3 et un nombre de votants de 5811.
+#. Remplissez la table en important `d'autres données <_static/bdd/films.sql>`_.
 
 Interroger une base de données
 ==============================
@@ -156,8 +147,8 @@ Connexion : processus d'authentification qui permet de s'assurer que seuls les u
 
 Les SGBD utilisent un vocabulaire spécifique relatif au processus de connexion :
 
-* **l'hôte** est l'adresse du serveur qui héberge la base de données;
-* **la base** est le nom de la base de donnée à laquelle on souhaite se connecter
+* **l'hôte** est l'adresse du serveur qui héberge la base de données
+* **la base** est le nom de la base de données à laquelle on souhaite se connecter
 * **user** est l'identifiant de l'utilisateur
 * **password** est le mot de passe de cet utilisateur (connexion sécurisée).
 
@@ -165,9 +156,9 @@ Type de connexion
 -----------------
 
 PHP propose plusieurs fonctionnalités intégrées pour se connecter à une base de données via un SGBD.
-Les évolutions successives de PHP explique l'existance de 3 exentions :
+Les évolutions successives de PHP explique l'existence de 3 extensions :
 
-* ``mysql_`` : API MySQL originelle => Dépréciée depuis PHP 5.5
+* ``mysql_`` : API MySQL originelle => Dépréciée depuis PHP 5.5, supprimée en PHP 7
 * ``mysqli_`` : API MySQL améliorée (**i** pour improved)
 * ``PDO`` : PHP Data Objects - API bdd abstraite
 
@@ -205,8 +196,8 @@ Faire une requête sur une base de données
   
 Après s'être connecté à une base de données, il est possible d'accéder à son contenu, en suivant le protocole suivant :
 
-#. On **interroge** une base de données grâce à une **requête**. Une requête constitue une instruction qui spécifie quelle(s) donnée(s) de quelle(s) tables on souhaite récupérer.
-#. Le SGBD se charge de **filtrer** et **trier** les données correspondantes à la requête et les **collecte** dans une structure de données exploitable en PHP (c'est à dire, un tableau).
+#. On **interroge** une base de données grâce à une **requête** qui spécifie quelle(s) donnée(s) de quelle(s) tables on souhaite récupérer.
+#. Le SGBD se charge de **filtrer** et **trier** les données correspondantes à la requête et les **collecte** dans une structure de données exploitable en PHP (c'est-à-dire un tableau).
 
 Ecrire une requête
 ------------------
@@ -230,9 +221,9 @@ Le langage SQL est articulé autour de mots-clés facilement interprétables, ex
 * ``UPDATE`` : mise à jour d'un enregistrement
 * ``DELETE`` : suppression d'un enregistrement
   
-.. note:
+.. note::
 
-	Cette liste n'est pas exhaustive : il est possible de tout faire avec des requêtes SQL (y compris création/suppresion de table et même de BDD).
+  Cette liste n'est pas exhaustive : il est possible de tout faire avec des requêtes SQL (y compris création/suppresion de table et même de BDD).
  
 Requête de lecture
 ------------------
@@ -261,7 +252,7 @@ Un exemple d'une requête de lecture complète pourrait être :
 * Il est possible de sélectionner les champs de plusieurs tables. Dans ce cas, il faut écrire ``table.champ`` après le ``SELECT`` (pas obligatoire si les noms des champs diffèrent).
 * ``WHERE`` indique le début des conditions qu'il est possible de combiner avec les opérateurs ``AND`` et ``OR`` en plus des parenthèses.
 * Le tri peut se faire sur plusieurs champs, par ordre d'apparition après ``ORDER BY``. C'est l'ordre alphabétique qui s'applique sur un champs texte. 
-* La limite du nombre d'enregistrement s'écrit : ``LIMIT nb, start`` ; il y aura donc ``nb`` enregistrements sélectionnés à partir de ``start``. Si l'on omet ``start``, la requête retournera ``nb`` enregistrements à partir du premier (**dans l'ordre défini par le tri**). 
+* La limite du nombre d'enregistrement s'écrit : ``LIMIT start, nb`` ; il y aura donc ``nb`` enregistrements sélectionnés à partir de ``start``. Si l'on omet ``start``, la requête retournera ``nb`` enregistrements à partir du premier (**dans l'ordre défini par le tri**). 
 
 Requête d'écriture
 ------------------
@@ -309,7 +300,7 @@ Exemple de **modification** :
 
   Les requêtes de modifications utilisent aussi une partie sélection.
   
-  La requête n'aboutiera pas si la condition du ``WHERE`` n'est pas satisfaisable.
+  La requête n'aboutira pas si la condition du ``WHERE`` n'est pas satisfaite.
   
 .. note::
   
@@ -334,18 +325,18 @@ Exemple de **suppression** :
 Exercice
 --------
 
-Depuis PhpMyAdmin, il est possible de taper directement des requêtes SQL et d'afficher le résultat retourné.
+Depuis phpMyAdmin, il est possible de taper directement des requêtes SQL et d'afficher le résultat retourné.
 
 #. Accédez à votre base de données de l'`exercice précédent<exo_phpmyadmin>`:ref:
-#. Depuis le formulaire de requêtes de PhpMyAdmin, écrire une requête pour récupérer le nom de tous les films
+#. Depuis le formulaire de requêtes de phpMyAdmin, écrire une requête pour récupérer le nom de tous les films
 #. Ecrire une requête permettant de récupérer au plus 5 films parmi les plus récents (<= 2010)
-#. Récupérez le nom et la note de tous les films et triez le résultat par note (croissant)
-#. Ajouter un nouveau film nommé "Alien", de 1979 et noté 8.5
+#. Récupérez le nom et la note de tous les films et triez le résultat par note (croissante)
+#. Ajouter un nouveau film nommé "Alien", de 1979, qui aura l'identifiant 29 et sera noté 8.5 pour un nombre de votants de 4828.
 
  
 .. _lecture_bdd:
  
-Lire les données d'une base de donnnées
+Lire les données d'une base de données
 ---------------------------------------
 
 La lecture de données depuis une BDD s'exécute suivant ce protocole :
@@ -383,7 +374,7 @@ Quelques remarques :
 * Dans la requête, si on veut injecter des paramètres, il faut le spécifier par le caractère anonyme ``?`` ou un identifiant précédé par ``:``.
 * La fonction ``execute()`` exécute la requête avec les paramètres fournis sous la forme d'un tableau simple (paramètres anonymes) ou associatif (paramètres identifés). Il n'est pas nécessaire de préciser de paramètres si la requête SQL n'en comporte pas.
 * La fonction ``fetch()`` retourne un tableau associatif dont les clés correspondent aux champs sélectionnés par la requête.
-* Lorsqu'il n'y a plus d'entrées, l'affectation dans le ``while`` retourne faux : on sort de la boucle.
+* Lorsqu'il n'y a plus d'entrée, l'affectation dans le ``while`` retourne faux : on sort de la boucle.
 * La fonction ``closeCursor()`` permet de libérer la ressource lorqu'on a fini les traitements sur les données retournées par le SGBD.
 
 .. nextslide::
@@ -413,7 +404,7 @@ Requête sans paramètres
   
   ``$query = $bdd->exec('...');``.
 
-  Attention : n'utilisez la fonction ``exec()`` que si la requête ne comporte pas de paramètres (pas de variables PHP) pour éviter la faille d'injection SQL.
+  Attention : n'utilisez la fonction ``exec()`` que si la requête ne comporte pas de paramètre (pas de variable PHP) pour éviter la faille d'injection SQL.
 
   
 Requête avec paramètres anonymes
@@ -574,7 +565,7 @@ Aller plus loin avec les requêtes SQL
 
 **Les alias :**
 
-Pour écrire une requête qui intervenant sur plusieurs tables jointes, il est possible de simplifier l'écriture en définissant des **alias**.
+Pour écrire une requête qui intervient sur plusieurs tables jointes, il est possible de simplifier l'écriture en définissant des **alias**.
 
 Deux écritures sont possibles après la clause ``FORM`` :
 
@@ -628,9 +619,7 @@ v1.0
 * pas de framework, ni de moteur de templates
 * passer le valideur HTML5 et CSS3 sans erreur
 * placer les fichiers dans le répertoire public_html/PHP/projet1 du login hébergeant le projet
-* envoyer un **zip** ou **tar.gz** du répertoire projet1 par mail à l’enseignant en mettant le binôme en CC
-
-  * pas de rar !
+* déposer le répertoire projet1 sur gitlab pour le partager avec votre binôme et votre enseignant (projet privé).
 
 .. nextslide::
 

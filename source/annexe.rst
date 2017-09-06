@@ -45,10 +45,10 @@ Pour connaître la version et la configuration de PHP sur le serveur de l'IUT :
 
 http://iutdoua-web.univ-lyon1.fr/~isabelle.goncalves/PHP
 
-PhpMyAdmin
+phpMyAdmin
 ++++++++++
 
-Pour accéder à l'interface PhpMyAdmin qui vous permet de gérer votre base de données MySQL sur le serveur de l'IUT, il vous suffit de vous connecter à l'adresse :
+Pour accéder à l'interface phpMyAdmin qui vous permet de gérer votre base de données MySQL sur le serveur de l'IUT, il vous suffit de vous connecter à l'adresse :
 
 http://iutdoua-web.univ-lyon1.fr/phpMyAdmin/
 
@@ -88,6 +88,23 @@ http://localhost/
 
   http://localhost:port/
 
-PhpMyAdmin est accessible à l'adresse :
+phpMyAdmin est accessible à l'adresse :
 
 http://localhost/phpMyAdmin/
+
+Utiliser un gestionnaire de versions
+====================================
+
+Créer un dépôt GIT sur un serveur
++++++++++++++++++++++++++++++++++
+
+L'IUT possède un site pour héberger et partager vos projets GIT :
+
+.. image:: _static/logo-gitlab.png
+   :target: GitLab_
+   :alt: GitLab
+   :height: 2em
+
+.. _GitLab: https://gitlab.com/
+
+https://iutdoua-git.univ-lyon1.fr
