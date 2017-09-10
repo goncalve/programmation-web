@@ -8,20 +8,19 @@ Plan des séances
 * Les bases de PHP
 * L'utilisation de formulaires
 
-Séance 3 + 4 : 4h
-+++++++++++++++++
+`Séance 3 + 4 : 4h <_static/seances/TD2-PHP-bd-mvc.pdf>`_
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 * Les bases de données
-* PHP Object
-* Projet v1: Site web de films
+* MVC "maison" simple
 
 Séance 5 + 6: 4h
 ++++++++++++++++++++
 
 * Design pattern 1
 
+  * PHP Object
   * MVC
-  * MVC "maison"
   * MVVM
 
 Séance 7 et 8 : 4h

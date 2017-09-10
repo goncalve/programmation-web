@@ -449,7 +449,7 @@ Exercice
 --------
 
 #. Créer une page contenant la fonction de connexion à la BDD films
-#. Récuperez la liste des films avec la requete adéquate
+#. Récuperez la liste des films avec la requête adéquate
 #. Afficher le résultat
 
 .. _ecriture_bdd:
@@ -501,9 +501,8 @@ Raccourci (sans paramètres uniquement) :
 Exercice
 ---------
 
-#. Créer une page "ajout_film.php"
-#. Créer et afficher un formulaire simple permettant l'ajout d'un film
-#. Modifier la page pour que les données envoyées soient insérées dans la table films de votre BDD.
+#. Créez une page qui affiche un formulaire simple permettant l'ajout d'un film
+#. Les données envoyées doivent être insérées dans la table films de votre BDD.
 #. Ajoutez les tests nécessaires au traitement des données entrées
 #. Si l'utilisateur entre un nom de film déja existant dans la table, appliquer une requête de modification avec les nouvelles données (empêchez la création de doublons).
 
