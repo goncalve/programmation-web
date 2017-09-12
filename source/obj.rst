@@ -25,7 +25,7 @@ Pourquoi le PHP objet
   
 * Notation PEAR
 
-  - https://pear.php.net/manual/fr/standards.php
+  - https://pear.php.net/manual/en/standards.php
   - à lire et à respecter
   
 Syntaxe de classe basique
@@ -54,20 +54,20 @@ Propriété, méthodes et constructeur
     <?php
     class Personne
     {
-      private $prenom;
-      private $nom;
-      private $age;
+      private $_prenom;
+      private $_nom;
+      private $_age;
 
       // Constructeur
       public function __construct($prenom, $nom)
       {
-          $this->prenom = $prenom;
-          $this->nom = $nom;
+          $this->_prenom = $prenom;
+          $this->_nom = $nom;
       }
 
       public function sePresenter()
       {
-          echo 'Bonjour ! Je m\'appelle '.$this->prenom.' '.$this->nom;
+          echo 'Bonjour ! Je m\'appelle '.$this->_prenom.' '.$this->_nom;
       }
     }
     ?>
@@ -77,7 +77,7 @@ Instances (objets)
 
 - Création d'un objet de la classe avec mot clé **new**
 - Appelle méthode (et propriété) avec **->**
-- Accès à l'instance avec **$this**
+- Accès à l'instance explicite avec **$this**
 
 .. code:: php
 
@@ -118,18 +118,18 @@ Définit un cas particulier d'une classe. Par exemple, un Etudiant est une Perso
   }
   class Etudiant extends Personne // Un Etudiant est un cas particulier de Personne
   {
-      private $num_etudiant; // qui a en plus un numéro étudiant
+      private $_num_etudiant; // qui a en plus un numéro étudiant
 
-      private function __construct($prenom, $nom, $num_etudiant)
+      public function __construct($prenom, $nom, $num_etudiant)
       {
           parent::__construct($prenom, $nom); // appel du constructeur de la classe Personne
-          $this->num_etudiant = $num_etudiant; // puis initialisation des attributs spécifiques
+          $this->_num_etudiant = $num_etudiant; // puis initialisation des attributs spécifiques
       }
 
       public function sePresenter() // redéfinit la méthode de la classe Personne
       {
-          parent::sePresenter(); // appel de la methode de la classe Personne (sans cette ligne la redéfinition est totale)
-          echo 'Et mon numéro étudiant est '.$this->num_etudiant;
+          parent::sePresenter(); // appel de la méthode de la classe Personne (sans cette ligne la redéfinition est totale)
+          echo 'Et mon numéro étudiant est '.$this->_num_etudiant;
       }
   }
   ?>
