@@ -12,16 +12,12 @@ Plan des séances
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 * Les bases de données
+
+`Séance 5 + 6: 4h <_static/seances/TD3-PHP-objet.pdf>`_
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 * MVC "maison" simple
-
-Séance 5 + 6: 4h
-++++++++++++++++++++
-
-* Design pattern 1
-
-  * PHP Object
-  * MVC
-  * MVVM
+* PHP Object
 
 Séance 7 et 8 : 4h
 ++++++++++++++++++++
