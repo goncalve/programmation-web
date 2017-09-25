@@ -98,7 +98,7 @@ Utiliser un gestionnaire de versions
 Créer un dépôt GIT sur un serveur
 +++++++++++++++++++++++++++++++++
 
-L'IUT possède un site pour héberger et partager vos projets GIT :
+L'université Lyon 1 possède un site pour héberger et partager vos projets GIT :
 
 .. image:: _static/logo-gitlab.png
    :target: GitLab_
@@ -107,4 +107,4 @@ L'IUT possède un site pour héberger et partager vos projets GIT :
 
 .. _GitLab: https://gitlab.com/
 
-https://iutdoua-git.univ-lyon1.fr
+https://forge.univ-lyon1.fr
