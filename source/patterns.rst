@@ -39,6 +39,7 @@ Objectif : S’assurer qu'une seule et même instance d’une classe soit utilis
   * Fonctionne très bien associé au pattern Factory
 
   * Méthode :
+
     * On va ici définir le constructeur en privé (ou protected)
     * Puis utiliser une méthode ou une classe Factory
 

@@ -108,3 +108,11 @@ L'université Lyon 1 possède un site pour héberger et partager vos projets GIT
 .. _GitLab: https://gitlab.com/
 
 https://forge.univ-lyon1.fr
+
+.. note::
+
+Concernant la forge de Lyon 1,
+en cas de problème avec les certificats SSL,
+consultez cette `FAQ`_
+
+.. _FAQ: https://forge.univ-lyon1.fr/EMMANUEL.COQUERY/forge/wikis/FAQ

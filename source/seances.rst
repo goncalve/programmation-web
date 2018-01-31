@@ -13,32 +13,24 @@ Plan des séances
 
 * Les bases de données
 
-`Séance 5 + 6: 4h <_static/seances/TD3-PHP-objet.pdf>`_
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+`Séance 5 à 9: 10h <_static/seances/TD3-PHP-objet.pdf>`_
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 * MVC "maison" simple
 * PHP Object
 
-Séance 7 et 8 : 4h
-++++++++++++++++++++
-
-* Design patterns 2 
-
-Séance 9 et 10 : 4h
-++++++++++++++++++++
+`Séance 10 + 11 : 4h <_static/seances/TD4-PHP-avance.pdf>`_
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 * PHP Avancé 
 
   * Gestion des sessions, mots de passe
-  * Protection et sécurité 
+  * Fichiers
 
-    * injection SQL
-    * XSS
+Séance 12 : 2h
+++++++++++++++
 
-Séance 11 et 12 : 4h
-++++++++++++++++++++
-
-* Etude comparative des frameworks PHP
+* DS
 
 
 
