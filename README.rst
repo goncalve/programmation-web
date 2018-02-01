@@ -4,7 +4,7 @@ Programmation Web
 Cours de programmation pour le Web dynamique
 au département informatique de l'`IUT de Lyon 1`_.
 
-Il est publié à http://iutdoua-web.univ-lyon1.fr/~isabelle.goncalves/programmation-web .
+Il est publié à http://isabelle.goncalves.perso.univ-lyon1.fr/PHP/.
 
 .. _IUT de Lyon 1: http://iut.univ-lyon1.fr/
 

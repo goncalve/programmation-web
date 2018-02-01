@@ -36,7 +36,7 @@ Table des matières
 Remerciements
 +++++++++++++
 
-Ce support contient des contributions de `Léo Le Taro`_, `Michael Mrissa`_, `Pierre De Vettor`_, `Isabelle Gonçalves`_, `Maxime Guériau`_ et `Pierre-Antoine Champin`_.
+Ce support contient des contributions de `Léo Le Taro`_, `Michael Mrissa`_, Pierre De Vettor, `Isabelle Gonçalves`_, Maxime Guériau et `Pierre-Antoine Champin`_.
 
 .. _Léo Le Taro: https://www.leo-letaro.fr
 .. _Maxime Guériau: http://liris.cnrs.fr/~mgueriau/
