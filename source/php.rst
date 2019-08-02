@@ -7,7 +7,7 @@
 Le PHP, c'est quoi ?
 ====================
 
-PHP: Hypertext Preprocessor
+PHP Hypertext Preprocessor
 +++++++++++++++++++++++++++
 
 .. figure:: _static/php/logo_php.png
@@ -22,9 +22,9 @@ __ http://commons.wikimedia.org/wiki/File:PHP-logo.svg
 * Un **langage de script interprété côté serveur**
 * Qui permet d'écrire des pages web **dynamiques**
 * Indiqué par l'extension de fichier **.php**
-* Un outil incontournable pour interagir avec une `base de données <bdd>`:doc: (MySQL)
+* Un outil pour interagir avec une `base de données <bdd>`:doc: (MySQL)
 
-Documentation: http://php.net/ rempli d'autres informations utiles
+Documentation: http://php.net/ 
 
 
 Comment ça marche ?
@@ -193,9 +193,6 @@ Exercice (10 minutes)
 
 Voir le `résultat 
 <_static/php/corrections/premierepagephp/>`__ attendu.
-
-* Comment rendre le résultat valide en HTML ?
-
 
 Un point sur l'UTF-8
 ======================
@@ -617,8 +614,8 @@ Il est possible de combiner les conditions dans une même instruction :
 Symbole Mot-clé      Signification
 ======= ============ ==========================
 ``&&``  AND          Et
-  ||    OR           Ou   
-  !     NOT          Négation de la condition
+``||``  OR           Ou   
+``!``   NOT          Négation de la condition
 ======= ============ ==========================
   
 Exemple : 
@@ -788,7 +785,7 @@ $a \*= 3        Multiplication  $a vaut $a \* 3.
 $a /= 3         Division        $a vaut $a /3.
 $a %= 3         Modulo          $a vaut $a % 3.
 $a++            Incrémentation  Equivalent à $a += 1.
-$a--            Décrémentation  Equivalent à $a -= 1.
+``$a--``        Décrémentation  Equivalent à $a -= 1.
 $b .= 'chaine'  Concaténation   $b vaut $b.'chaine'.
 =============== =============== =======================  
 
@@ -1042,48 +1039,46 @@ __ http://php.net/manual/fr/function.htmlentities.php
 
 .. _exo_impots:
   
-Exercice : Les impots
+Exercice : Les impôts
 +++++++++++++++++++++
 
 * On souhaite faire une page simple permettant à un utilisateur de calculer le montant de son impôt
 
-  * On calcule le nombre de parts du salarié (nbEnfants est son nombre d'enfants)
+  * On calcule le nombre de parts de l'utilisateur (nbEnfants est son nombre d'enfants)
 
     .. code:: 
 
-      parts = nbEnfants/2+1 (pas marié)
+      N = nbEnfants (pas marié)
 
-      parts = nbEnfants/2+2 (marié)
+      N = nbEnfants+1 (marié)
 
 
-  * On calcule son revenu imposable (S est le salaire)
+  * On calcule le revenu par part (R est le revenu imposable)
 
     .. code:: 
 
-      R = 0.72 * S
+      Q = R / N
 
-Exercice : Les impots
+Exercice : Les impôts
 +++++++++++++++++++++
 
-* On calcule son quotient familial
+* Les tranches du barème sont les suivantes, selon le revenu par part Q, à appliquer au revenu imposable :
 
-  .. code:: 
+  ======== ============ ============= ============== ==============
+  0 à 9963 9964 à 27518 27519 à 73778 73779 à 156243 156244 et plus
+  ======== ============ ============= ============== ==============
+  0%       14%          30%           41%            45%
+  ======== ============ ============= ============== ==============
 
-    Q = R / parts
+* Les déductions par part sont les suivantes, selon le revenu par part Q :
 
+  ======== ============ ============= ============== ==============
+  0 à 9963 9964 à 27518 27519 à 73778 73779 à 156243 156244 et plus
+  ======== ============ ============= ============== ==============
+  0        1394,96      5798          1391,69        20163,45
+  ======== ============ ============= ============== ==============
 
-* Les tranches du barème sont les suivantes, appliquée au montant du quotient familial Q :
-
-  ======== ============ ============= ============= =============
-  0 à 5614 5615 à 11198 11199 à 24872 24873 à 66679 66680 et plus
-  ======== ============ ============= ============= =============
-  0%       5.5%         14%           30%           40%
-  ======== ============ ============= ============= =============
-
-
-* Le montant de l’impot est alors remultiplié par le nombre de parts nbParts.
-
-Exercice : Les impots
+Exercice : Les impôts
 +++++++++++++++++++++
 
 #. Créer un formulaire permettant à l’utilisateur de rentrer ses informations

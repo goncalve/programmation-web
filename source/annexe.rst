@@ -19,6 +19,10 @@ http://iutdoua-web.univ-lyon1.fr/~votrelogin
 
 où ``votrelogin`` correspond à votre identifiant étudiant (pxxxxxxx).
 
+Si vous n'êtes pas sur le réseau Lyon 1, vous devrez passer par le web-VPN de Lyon 1:
+
+https://vpn.univ-lyon1.fr
+
 
 Accéder à votre répertoire en FTP
 ---------------------------------
@@ -48,7 +52,7 @@ http://iutdoua-web.univ-lyon1.fr/~isabelle.goncalves/PHP
 phpMyAdmin
 ++++++++++
 
-Pour accéder à l'interface phpMyAdmin qui vous permet de gérer votre base de données MySQL sur le serveur de l'IUT, il vous suffit de vous connecter à l'adresse :
+Pour accéder à l'interface phpMyAdmin qui vous permet de gérer votre base de données MariaDB sur le serveur de l'IUT, il vous suffit de vous connecter à l'adresse :
 
 http://iutdoua-web.univ-lyon1.fr/phpMyAdmin/
 

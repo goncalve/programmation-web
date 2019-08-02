@@ -1,8 +1,8 @@
 :tocdepth: 2
 
-==============================
+=============================
  Gestion des bases de données
-==============================
+=============================
 
 Introduction aux bases de données
 =================================
@@ -44,12 +44,12 @@ Quel SGBD utiliser ?
 
 Il existe plusieurs SGBD; parmi les plus utilisés on retrouve :
 
-- MySQL
+- MariaDB/MySQL
 - Oracle
 - Microsoft SQL Server
 - PostgreSQL 
 
-Dans ce cours, nous travaillerons avec MySQL. Il est le SGBD libre et gratuit le plus utilisé (mais pas le seul).
+Dans ce cours, nous travaillerons avec MariaDB/MySQL.
 
 Comment s'interfacent PHP et MySQL ?
 ++++++++++++++++++++++++++++++++++++
@@ -58,14 +58,14 @@ Comment s'interfacent PHP et MySQL ?
 		:alt: client-serveur-mysql
 
 #. Le serveur interprète le script PHP
-#. PHP interroge (requête) la base de données par MySQL
-#. MySQL renvoie les données en réponse à la requête
+#. PHP interroge (requête) la base de données par MariaDB/MySQL
+#. MariaDB/MySQL renvoie les données en réponse à la requête
 #. PHP traite les données reçues côté serveur
 
 .. note::
 
   Dans ce schéma, vous pourriez remplacer PHP par n'importe quel langage dédié à la gestion de pages web dynamiques.
-  De même, MySQL pourrait très bien être remplacé par un autre SGBD, tant que le langage qui est utilisé de PHP au SGBD reste le SQL.
+  De même, MariaDB/MySQL pourrait très bien être remplacé par un autre SGBD, tant que le langage qui est utilisé de PHP au SGBD reste le SQL.
 
 Structure d'une base de données
 +++++++++++++++++++++++++++++++
@@ -99,7 +99,7 @@ Identifiant   Champ1      Champ2      ...
 .. tip::
   
   Le champ identifiant n'est pas obligatoire, mais il permet d'affecter une valeur unique à chaque enregistrement.
-  L'utilisation d'identifiants permet aussi de lier les données de plusieurs tables entre-elles.
+  L'utilisation d'identifiants permet aussi de lier les données de plusieurs tables entre elles.
 
 .. _gestion_bdd:
  
@@ -514,7 +514,7 @@ Les requêtes de jointure
 Un des intérêts majeurs des BDD est de pouvoir lier des données entre-elles afin de leur donner une sémantique plus forte.
 
 L'utilisation d'identifiants uniques (**clés primaires**) pour chaque enregistrement, permet leur réutilisation dans d'autres tables.
-On les appelle alors des **clés secondaires** (ou **clés étrangères**).
+On les appelle alors des **clés étrangères**.
 
 Exemple, table "films":
 
@@ -588,7 +588,7 @@ Ou
  
 .. nextslide::
 
-**Les requêtes de jointure** s'écrivent en utilisant le mot clé ``INNER JOIN ... ON``. La clause ``ON`` permet de définir la condition de la jointure (c'est à dire la correspondance entre les clés primaires/étrangères).
+**Les requêtes de jointure** s'écrivent en utilisant le mot clé ``JOIN``. La clause ``ON`` permet de définir la condition de la jointure (c'est à dire la correspondance entre les clés primaires/étrangères).
 
 Exemple :
 
@@ -618,7 +618,6 @@ v1.0
 * pas de framework, ni de moteur de templates
 * passer le valideur HTML5 et CSS3 sans erreur
 * placer les fichiers dans le répertoire public_html/PHP/projet1 du login hébergeant le projet
-* déposer le répertoire projet1 sur gitlab pour le partager avec votre binôme et votre enseignant (projet privé).
 
 .. nextslide::
 

@@ -83,8 +83,10 @@
 			<li><a href="#foreach2">La boucle foreach pour les tableaux clé-valeur</a></li>
 		</ul>
 	</nav> -->
-	<div id="retour">
+        <?php
+	/*<div id="retour">
 		<a href="#" onClick="history.go(-1);return true;">Retour</div>
-	</div>
+	</div>*/
+        ?>
   </body>
 </html>

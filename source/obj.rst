@@ -134,14 +134,13 @@ Définit un cas particulier d'une classe. Par exemple, un Etudiant est une Perso
   }
   ?>
 
-Contrainte de typage (Type-hinting)
-+++++++++++++++++++++++++++++++++++
+Contrainte de typage
+++++++++++++++++++++
 
 * Contraintes de typage des paramètres d'une fonction
 
   - Classe, array, callable
-  - Attention: pas les types scalaires (int, string, etc...), sauf en PHP 7+
-  - `Type Hinting`_
+  - `Déclaration de types`_
   
   .. code:: php
 
@@ -159,15 +158,15 @@ Contrainte de typage (Type-hinting)
     faireParler($tom); // À votre avis, est-ce que c'est sePresenter de Personne ou d'Etudiant qui sera appelé ?
     ?>
 
-.. _Type Hinting: http://php.net/manual/fr/language.oop5.typehinting.php
+.. _Déclaration de types: https://www.php.net/manual/fr/functions.arguments.php#functions.arguments.type-declaration
 
 Méthode statiques
 +++++++++++++++++
 
 * Méthode de la classe indépendante de l'instance
 * Mot clé **static**
-* Peut etre appellée par l'operateur de résolution de portée **::**
-* **À éviter**. S'il y en a besoin, c'est un problème de design.
+* Peut être appelée par l'opérateur de résolution de portée **::**
+* **À éviter la plupart du temps**. S'il y en a besoin, c'est souvent un problème de design.
 
 .. code:: php
 
@@ -187,9 +186,9 @@ Attributs statiques
 +++++++++++++++++++
 
 * Mot clé **static**
-* Acces depuis extérieur avec **::**
-* Acces depuis méthode statique avec **self**
-* **À éviter**. Ce ne sont autres que des variables globales déguisées. S'il y en a besoin, c'est un problème de design.
+* Accès depuis extérieur avec **::**
+* Accès depuis méthode statique avec **self**
+* **À éviter la plupart du temps**. Ce sont des variables globales déguisées. S'il y en a besoin, c'est souvent un problème de design.
 
 .. code:: php
 
@@ -291,7 +290,7 @@ Interfaces
 * Déclare un comportement (saitParler) qui est garanti être appelable par tous ceux qui implémentent SaitParler
 
   - Mais on peut implémenter plusieurs interfaces en même temps (``implements Int1, Int2, Int3``), alors qu'on ne peut étendre que d'une classe
-  - Il est également possible pour une fonction de Type-hinter sur une interface :
+  - Il est également possible pour une fonction de prendre en paramètre un objet qui implémente une interface :
 
   .. code:: php
     

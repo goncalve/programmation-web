@@ -4,50 +4,6 @@
  Le Web : Introduction
 ============================
 
-Organisation du cours
-======================
-
-Plan des séances
-+++++++++++++++++++++
-
-.. rst-class:: small
-
-  * Séance 1 et 2 : 4H
-
-    * Le Web : Rappel / Bases de PHP
-  
-  * Séance 3 et 4 : 4h
-    
-    * Bases de données / PHP Avancé Projet v1
-
-  * Séance 5 et 6: 4h
-
-    * Objet
-  
-  * Séance 7 et 8 : 4h
-    
-    * Design pattern 1 (MVC, MVVM, etc...)
-
-  * Séance 9 et 10 : 4h
-    
-    * Design patterns 2 (Autres designs patterns, Dependency Injection)
-  
-  * Séance 11 et 12 : 4h
-    
-    * Étude comparative des frameworks PHP
-    
-Participation, support et évaluation
-+++++++++++++++++++++++++++++++++++++++++++
-
-  * Ce cours est vivant => tous retours bienvenus
-
-  * Contribuer à améliorer le cours est bénéfique pour tous
-
-  * Interrogation sur les savoirs théoriques (tout ce qui est dans le support de cours) et pratiques (exercices)
-  
-    * Interrogation surprise possible
-
-
 C'est quoi le Web ?
 ===================
 
